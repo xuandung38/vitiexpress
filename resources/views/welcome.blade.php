@@ -138,13 +138,10 @@
 						</h1>
 						<p class="mb-5">Với đội ngũ tư vấn chuyên nghiệp, VITI EXPRESS sẽ mang tới cho bạn giải pháp mua
 							hàng quốc tế tốt nhất.</p>
-						<form id="#phone-form" >
-							<div class="form-group d-flex">
-								<input type="text" class="form-control" placeholder="Số điện thoại của bạn">
-								<input type="submit" style="background-color: #052a4c;"
-								       class="btn btn-primary text-white px-4" value="Xác nhận">
-							</div>
-						</form>
+
+						<a type="button" href="#contact-section"
+						   class="btn btn-danger text-white px-4" > LIÊN HỆ NGAY</a>
+
 					</div>
 				</div>
 			</div>

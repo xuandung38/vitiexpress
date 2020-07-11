@@ -6,7 +6,8 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue';
+import { BootstrapVue, IconsPlugin, LayoutPlugin, ModalPlugin, CardPlugin, BModal, VBModal,TablePlugin } from 'bootstrap-vue';
 
 /**
  * The following block of code may be used to automatically register your
@@ -18,9 +19,17 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+Vue.use(BootstrapVue,ModalPlugin,CardPlugin);
+Vue.use(IconsPlugin);
+Vue.use(LayoutPlugin);
+Vue.use(TablePlugin);
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('b-modal', BModal)
+// Note that Vue automatically prefixes directive names with `v-`
+Vue.directive('b-modal', VBModal)
 
+const adminComponents = require.context('./components/admin', true, /\.vue$/i); // eslint-disable-line no-undef
+adminComponents.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], adminComponents(key).default));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

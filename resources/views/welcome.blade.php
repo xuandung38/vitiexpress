@@ -80,7 +80,7 @@
 
 
 				<div class="site-logo">
-					<a href="index.html" class="text-black"><span class="text-primary" style="color: #12487b!important">VITI EXPRESS</span></a>
+					<a href="#" class="text-black"><span class="text-primary" style="color: #12487b!important">VITI EXPRESS</span></a>
 				</div>
 
 				<div class="col-12">
